@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="js/sidebar.js"></script>
+    <!-- leaflet styles -->
+    <link rel="stylesheet" href="/CSS/leaflet.css" />
+    <script src="/JS/leaflet.js"></script>
+    <link href="CSS/Contact.css" rel="stylesheet">
+
+    
+    
+
+</head>
+<body>
+
+    <!-- Mobile Header ---------------------------------------------------- -->
+    <!-- this sidebar menu is hidden on breakpoints that are not mobile.  -->
+    <nav>
+
+
+        <!-- the javascript within these menus call for a specific function in my sidebar.js file. hideSidebar links to the function that hides the sidebar when clicked, and the showSidebar is for the function that shows the sidebar when clicked.  -->
+
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a class="X-button" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a class="nav-links" href="home.html">Home</a></li>
+            <li><a class="nav-links" href="Equipment.html">Equipment</a></li>
+            <li><a class="nav-links" href="About.html">About</a></li>
+            <li><a class="nav-links" href="Contact.html">Contact</a></li>
+            
+        </ul>
+        <!-- this one is also hidden -->
+        <ul class="mobile-header">
+            <li> <img class="koltech-logo" src="images/logo/koltech main logo.png" alt="koltech logo"> </li>
+            <li class="hideOnMobile"><a class="nav-links" href="home.html">Home</a></li>
+            <li class="hideOnMobile"><a class="nav-links" href="Equipment.html">Equipment</a></li>
+            <li class="hideOnMobile"><a class="nav-links" href="About.html">About</a></li>
+            <li class="hideOnMobile"><a class="nav-links" href="Contact.html">Contact</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
+        </ul>
+    </nav>
+
+    <!--  this is the main header. this shows up everywhere except mobile. -->
+    <!-- header --------------------------------------------------- -->
+    <div class="header">
+        <!-- this is the home logo  -->
+        <div class="home-logo">
+            <img class="koltech-logo" src="images/logo/koltech logo.png" alt="koltech logo">
+        </div>
+
+    <!-- this is the main navigation menu -->
+        <div class="navigation">
+                <ul>
+                    <li><a class="nav-links" href="home.html">Home</a></li>
+                    <li><a class="nav-links" href="Equipment.html">Equipment</a></li>
+                    <li><a class="nav-links" href="About.html">About</a></li>
+                    <li><a class="current-page" href="Contact.html">Contact</a></li>
+                </ul>
+        </div>
+    </div>
+
+<div class="all-content">
+    <div class="title">
+        <h1>Contact</h1>
+    </div>
+    <div class="content">
+    
+        <div class="text">
+            <p>To get an estimate, send us an email with the following information: </p>
+                <ul class="contact-text">
+                    <li>- Name</li>
+                    <li>- Phone Number</li>
+                    <li>- Project Outline</li>
+                </ul>
+                <p>We will respond to your request within 4 business days.</p>
+                <p>555 Seymour St Vancouver, BC
+                <br>604-518-3146</p>
+                <p>Hours:</p>
+            <ul class="contact-text">
+                <li>- Monday - Friday: 9AM - 5PM
+                <li>- Weekends: 10AM - 4PM 
+            </ul>
+                <p>See you soon!</p>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
+    
+
+
+ <!-- footer -->
+ <footer class="footer-content">
+    <div class="footer">
+        <div class="footer-links">
+            <a class="nav-links" href="home.html">Home</a>
+            <a class="nav-links" href="Equipment.html">Equipment</a>
+            <a class="nav-links" href="About.html">About</a>
+            <a class="nav-links" href="Contact.html">Contact</a>
+        </div>
+        <div class="home-logo">
+            <img class="koltech-logo" src="images/logo/koltech logo.png" alt="koltech logo">
+        </div>
+
+    </div>
+    <h1 class="footer-rights"> 2024 Koltech All Rights Reserved</h1> 
+
+</footer>
+
+<script>
+        
+//   initialization of the map on the contact page
+        var map = L.map('map').setView([49.246292, -123.116226], 13);
+// this creates an icon on the page based off of my png 
+        const myIcon = L.icon({
+            iconUrl: 'Images/marker.png',
+            iconSize: [38, 32],
+        });
+// this creates a new layer, then is added to the page with the addto function. 
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+// this is where the marker is placed, based on arguments. these arguments happen to be coordinates. 
+        L.marker([49.246292, -123.116226],  {icon: myIcon}).addTo(map)
+            .bindPopup('Vancouver<br> ')
+            .openPopup();
+</script>
+</body>
+</html>

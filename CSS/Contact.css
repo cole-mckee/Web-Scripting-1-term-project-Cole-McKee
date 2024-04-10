@@ -1,0 +1,381 @@
+
+@media only screen and (min-width: 840px){
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+
+}
+p, li {
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-family: Verdana, sans-serif
+    }
+
+.mobile-header, .sidebar {
+    display: none;
+    
+    }
+    
+    /* header content */
+    .header {
+        
+    
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 10vh;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+    margin-left: -10px;
+    
+    }
+    
+    .koltech-logo {
+    width: 20vw;
+    margin: 2vw;
+    }
+    
+    ul {
+    display: flex;
+    flex-direction: row;
+    }
+    ul li{
+    margin-right: 5vw;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    
+    }
+    
+    /* nav styles */
+    .current-page {
+    color: black;
+    text-decoration: underline;
+    font-family: Verdana, sans-serif ;
+    margin-right: 2vw;
+    
+    border-radius: 5%;
+    list-style: none;
+    }
+    
+    .nav-links {
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Verdana, sans-serif ;
+    margin-right: 1vw;
+    border-radius: 0%;
+    list-style: none;
+    }
+    
+    .nav-links:hover {
+    color:#ffb000;
+    }
+    
+#map { 
+    height: 30vh;
+    width: 50vw;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    }
+.content {
+    display: flex;
+    flex-direction: row;
+    max-width: 60vw;
+}
+
+.all-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+}
+.text {
+    width: 40vw;
+}
+
+/* footer  ----------------------------------------------------*/
+
+.footer-content, .footer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    }
+    
+    .footer-content {
+        margin-bottom: 0px;
+        left: 0;
+        
+        bottom: 0;
+        background: rgb(255, 255, 255 );
+    }
+    
+    .footer {
+    display: flex; 
+    flex-direction: row;
+    }
+    
+    .footer-links {
+    background: none;
+    width: 50vw;
+    height: 5px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    }
+    
+    /* footer links ---------------------------------------------------- */
+    .links {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5%;
+    }
+    
+    .footer-rights {
+    font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    body{
+        max-width: 100vw;
+        overflow-x: hidden;
+
+    }
+    
+
+    h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    }
+    
+    html {
+    margin: -10px;
+    margin-bottom: 0px;
+    }
+    
+    
+    
+    .mobile-header {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items:center;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .hideOnMobile {
+        display: none;
+      }
+    
+    /* header content */
+    .header {
+
+    
+        
+    
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 10vh;
+    font-size: 1em;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+    margin-left: -10px;
+    
+    }
+    
+    .koltech-logo {
+    width: 20vw;
+    margin: 2vw;
+    }
+    
+    ul {
+    display: flex;
+    flex-direction: row;
+    }
+    ul li{
+    margin-right: 5vw;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    
+    }
+    
+    /* nav styles */
+    .current-page {
+    color: black;
+    text-decoration: underline;
+    font-family: Verdana, sans-serif ;
+    margin-right: 2vw;
+    
+    border-radius: 5%;
+    list-style: none;
+    }
+    
+    .nav-links {
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Verdana, sans-serif ;
+    margin-right: 1vw;
+    border-radius: 0%;
+    list-style: none;
+    }
+    
+    .nav-links:hover {
+    color:#ffb000;
+    }
+    /* mobile header---------------------------------- */
+    nav{
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 3px 3px 5px #221f20;
+      }
+      
+      nav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+      }
+      
+      nav li{
+        height: 50px;
+      
+      }
+      nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration:none;
+        display: flex;
+        align-items: center;
+        color: black;
+      
+      }
+      
+      .sidebar {
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      
+      .X-button {
+        padding-left: 20px;
+      }
+      
+      .sidebar li{
+        width: 100%;
+      }
+      .sidebar a{
+        width: 100%;
+      }
+
+
+
+    #map { 
+        height: 30vh;
+        width: 50vw;
+        margin: 20px;
+    }
+    
+    .contact-text {
+        display: flex;
+        flex-direction: column;
+        }
+    .content {
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw;
+    }
+    
+    .all-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vw;
+    }
+    .text {
+        width: 40vw;
+    }
+
+
+
+      /* footer  ----------------------------------------------------*/
+    
+    .footer-content, .footer {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        }
+        
+        .footer-content {
+            margin-bottom: 0px;
+            left: 0;
+            height: 15vh;
+            bottom: 0;
+            background: rgb(255, 255, 255 );
+        }
+        
+        .footer {
+        display: flex; 
+        flex-direction: row;
+        }
+        
+        .footer-links {
+        background: none;
+        width: 50vw;
+        height: 10px;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        }
+        
+        /* footer links ---------------------------------------------------- */
+        .links {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-family: Verdana, sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5%;
+        }
+        
+        .footer-rights {
+            margin-top: 50px;
+        font-size: 15px;
+        }
+    
+
+
+}
